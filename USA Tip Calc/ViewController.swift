@@ -7,6 +7,11 @@
 //
 // ca-app-pub-8080686117362027~9960198772
 
+//Test for google - ca-app-pub-3940256099942544/2934735716
+
+//Actual ad code - ca-app-pub-8080686117362027/8657878904
+
+
 
 import UIKit
 import Firebase
@@ -48,7 +53,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, UIPickerViewDataS
         request.testDevices = [kGADSimulatorID]
         
         // Set Up add
-        myBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        myBanner.adUnitID = "ca-app-pub-8080686117362027/8657878904"
         
         myBanner.rootViewController = self
         myBanner.delegate = self
@@ -73,7 +78,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, UIPickerViewDataS
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = percentageArray[row] + "%"
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.foregroundColor: UIColor.black])
         
         return myTitle
     }
@@ -82,24 +87,41 @@ class ViewController: UIViewController, GADBannerViewDelegate, UIPickerViewDataS
     
     @IBAction func numbers(_ sender: UIButton) {
         
+        if totalLabel.text == "0.00" {
+            totalLabel.text = ""
+        }
+      
+        if totalLabel.text == "0" {
+            totalLabel.text = ""
+        }
+       
         
      //Then do the maths
         
         //Check for decimal point tag
-        if sender.tag == 11 {
-            totalLabel.text = totalLabel.text! + "."
+        if sender.tag == 11 && totalLabel.text == "" {
+            totalLabel.text = totalLabel.text! + "0."
           numberOnScreen = Double(totalLabel.text!)!
         
             decimalButton.isUserInteractionEnabled = false;
             
             
+        } else if sender.tag == 11 {
+         totalLabel.text = totalLabel.text! + "0"
+            numberOnScreen = Double(totalLabel.text!)!
         }
+            
+            
+            
+            
             //Check for reset
            else if sender.tag == 12 {
                 
-         totalLabel.text = String("")
+         totalLabel.text = String("0")
+            tipLabel.text = String("0")
                 numberOnScreen = 0
             decimalButton.isUserInteractionEnabled = true;
+            
             
         } else if performingMath == true {
             //totalLabel.text = ""
@@ -117,6 +139,15 @@ class ViewController: UIViewController, GADBannerViewDelegate, UIPickerViewDataS
     
     //Do some maths for the Picker
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if totalLabel.text == "0" {
+            totalLabel.text = ""
+            tipLabel.text = ""
+        } else {
+            //Do nothing
+        }
+        
+        
         //DO SOME MATHS Stuff
         mathNumber = "1." + percentageArray[row]
         percentageMath = Double(mathNumber)!
@@ -130,8 +161,8 @@ class ViewController: UIViewController, GADBannerViewDelegate, UIPickerViewDataS
     }
     
     
+
+
 }
-
-
 
 
