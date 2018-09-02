@@ -16,6 +16,7 @@
 import UIKit
 import Firebase
 import GoogleMobileAds
+import StoreKit
 
 
 class ViewController: UIViewController, GADBannerViewDelegate, UIPickerViewDataSource ,UIPickerViewDelegate {
@@ -26,6 +27,16 @@ class ViewController: UIViewController, GADBannerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var decimalButton: UIButton!
     
+    @IBOutlet weak var buttonOne: UIButton!
+    @IBOutlet weak var buttonTwo: UIButton!
+    @IBOutlet weak var buttonThree: UIButton!
+    @IBOutlet weak var buttonFour: UIButton!
+    @IBOutlet weak var buttonFive: UIButton!
+    @IBOutlet weak var buttonSiz: UIButton!
+    @IBOutlet weak var buttonSeven: UIButton!
+    @IBOutlet weak var buttonEight: UIButton!
+    @IBOutlet weak var buttonNine: UIButton!
+    @IBOutlet weak var buttonZero: UIButton!
     
     
     //Some variables for the numbers stuff
@@ -38,11 +49,16 @@ class ViewController: UIViewController, GADBannerViewDelegate, UIPickerViewDataS
     var finalTotal: Double = 0;
     var finalTip: Double = 0;
     
+   
+    
    //Create an array for percentages
     let percentageArray = ["10", "15", "18", "20", "22", "25"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Show review
+        showReview()
         
         //Set yourself as delegate for the picker
         tipPicker.delegate = self
@@ -122,6 +138,18 @@ class ViewController: UIViewController, GADBannerViewDelegate, UIPickerViewDataS
                 numberOnScreen = 0
             decimalButton.isUserInteractionEnabled = true;
             
+            //Enable all the buttons
+            buttonOne.isUserInteractionEnabled = true;
+            buttonTwo.isUserInteractionEnabled = true;
+            buttonThree.isUserInteractionEnabled = true;
+            buttonFour.isUserInteractionEnabled = true;
+            buttonFive.isUserInteractionEnabled = true;
+            buttonSiz.isUserInteractionEnabled = true;
+            buttonSeven.isUserInteractionEnabled = true;
+            buttonEight.isUserInteractionEnabled = true;
+            buttonNine.isUserInteractionEnabled = true;
+            buttonZero.isUserInteractionEnabled = true;
+            
             
         } else if performingMath == true {
             //totalLabel.text = ""
@@ -158,11 +186,27 @@ class ViewController: UIViewController, GADBannerViewDelegate, UIPickerViewDataS
         finalTip = finalTotal - numberOnScreen
         let roundedTip = String(format: "%.2f", finalTip)
        tipLabel.text = String(roundedTip)
+        
+        //Disable all the buttons
+        buttonOne.isUserInteractionEnabled = false;
+        buttonTwo.isUserInteractionEnabled = false;
+        buttonThree.isUserInteractionEnabled = false;
+        buttonFour.isUserInteractionEnabled = false;
+        buttonFive.isUserInteractionEnabled = false;
+        buttonSiz.isUserInteractionEnabled = false;
+        buttonSeven.isUserInteractionEnabled = false;
+        buttonEight.isUserInteractionEnabled = false;
+        buttonNine.isUserInteractionEnabled = false;
+        buttonZero.isUserInteractionEnabled = false;
+        decimalButton.isUserInteractionEnabled = false;
+        
+        
+        
     }
     
-    
+   
+    }
 
 
-}
 
 

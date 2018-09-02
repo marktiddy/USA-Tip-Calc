@@ -342,6 +342,16 @@ Over</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="buttonEight" destination="2rm-we-9Fo" id="oIu-Y6-Mku"/>
+                        <outlet property="buttonFive" destination="Iyk-Bn-iUE" id="W1c-Ir-XpF"/>
+                        <outlet property="buttonFour" destination="eWZ-eS-DDn" id="JWH-Rm-4LT"/>
+                        <outlet property="buttonNine" destination="9WT-Xi-Kkr" id="71P-md-wVt"/>
+                        <outlet property="buttonOne" destination="6dg-zV-vbm" id="tFa-Nv-n3h"/>
+                        <outlet property="buttonSeven" destination="gwP-SK-SQs" id="l2K-fg-hyS"/>
+                        <outlet property="buttonSiz" destination="RX8-PC-rSn" id="aET-2T-Edb"/>
+                        <outlet property="buttonThree" destination="acJ-1R-Ptw" id="Mhc-NE-AGy"/>
+                        <outlet property="buttonTwo" destination="XHu-5o-8x3" id="Esr-Iq-g3T"/>
+                        <outlet property="buttonZero" destination="jDe-Rb-NEO" id="2nA-r2-4Zt"/>
                         <outlet property="decimalButton" destination="uro-NZ-92I" id="zCQ-nj-8Eh"/>
                         <outlet property="myBanner" destination="V2C-Ra-iOy" id="OIf-4O-Q6x"/>
                         <outlet property="tipLabel" destination="blq-mA-Jb3" id="jiP-B2-z23"/>

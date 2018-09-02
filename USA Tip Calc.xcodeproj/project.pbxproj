@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BBBC001213C4717003A186A /* reviewTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBBC000213C4717003A186A /* reviewTracker.swift */; };
 		8BDAA5FC212851E60086578A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDAA5FB212851E60086578A /* AppDelegate.swift */; };
 		8BDAA5FE212851E60086578A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDAA5FD212851E60086578A /* ViewController.swift */; };
 		8BDAA601212851E60086578A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BDAA5FF212851E60086578A /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		3CC9A80A9152874DDEDDC8B0 /* Pods-USA Tip Calc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USA Tip Calc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-USA Tip Calc/Pods-USA Tip Calc.debug.xcconfig"; sourceTree = "<group>"; };
+		8BBBC000213C4717003A186A /* reviewTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewTracker.swift; sourceTree = "<group>"; };
 		8BDAA5F8212851E60086578A /* USA Tip Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "USA Tip Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BDAA5FB212851E60086578A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BDAA5FD212851E60086578A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			children = (
 				8BEF71702132FEA3007EBEC2 /* GoogleService-Info.plist */,
 				8BDAA5FB212851E60086578A /* AppDelegate.swift */,
+				8BBBC000213C4717003A186A /* reviewTracker.swift */,
 				8BDAA5FD212851E60086578A /* ViewController.swift */,
 				8BDAA5FF212851E60086578A /* Main.storyboard */,
 				8BDAA602212851F00086578A /* Assets.xcassets */,
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BBBC001213C4717003A186A /* reviewTracker.swift in Sources */,
 				8BDAA5FE212851E60086578A /* ViewController.swift in Sources */,
 				8BDAA5FC212851E60086578A /* AppDelegate.swift in Sources */,
 			);
