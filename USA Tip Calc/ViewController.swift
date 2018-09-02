@@ -107,7 +107,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, UIPickerViewDataS
             
             
         } else if sender.tag == 11 {
-         totalLabel.text = totalLabel.text! + "0"
+         totalLabel.text = totalLabel.text! + "."
             numberOnScreen = Double(totalLabel.text!)!
         }
             
